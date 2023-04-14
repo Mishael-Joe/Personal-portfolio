@@ -1,0 +1,47 @@
+@include media-sm {
+    header {
+        .menu-btn {
+            right: 3rem;
+        }
+
+        main {
+
+            .intro {
+                width: 100vw;
+                margin-left: 2rem;
+                .my__name {
+                    font-weight: weight(bold);
+                    font-size: size(sm-only);
+                }
+            }
+            .my-services {
+                margin-left: 2rem;
+            }
+        }
+
+        footer {
+            .container {
+                font-size: 2.5vw;
+            }
+        }
+    }
+}
+
+
+@include media-md {
+    
+    main {
+
+        /* Responsive layout - when the screen is less than 600px wide, 
+        make the two columns stack on top of each other instead of next to each other */
+        .contact {
+            .container {
+                width: 100vw;
+                .col-25, .col-75 {
+                    width: 100%;
+                    margin-top: 0;
+                  }
+            }
+        }
+    }
+}

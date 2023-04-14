@@ -1,0 +1,15 @@
+@import 'config', 'header', 'mainbody', 'responsive';
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Inconsolata:wght@300;500&family=Roboto+Slab:wght@300;600&display=swap');
+
+// font-family: 'Bitter', serif;
+// font-family: 'Inconsolata', monospace;
+// font-family: 'Roboto Slab', serif;
+
+body {
+    background: darken($secondary-color, 3%);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+  }

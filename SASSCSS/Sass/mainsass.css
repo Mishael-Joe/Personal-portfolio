@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Inconsolata:wght@300;500&family=Roboto+Slab:wght@300;600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header__logo {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+header .menu-btn {
+  position: fixed;
+  top: 1rem;
+  right: 4rem;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 3;
+}
+header .menu-btn__burger {
+  background: rgba(245, 245, 245, 0.734);
+  width: 28px;
+  height: 3px;
+  position: absolute;
+  margin-right: 0.5rem;
+  top: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+header .menu-btn__burger::before {
+  content: "";
+  background: rgba(245, 245, 245, 0.734);
+  width: 28px;
+  height: 3px;
+  position: absolute;
+  top: -8px;
+  transition: all 0.5s ease-in-out;
+}
+header .menu-btn__burger::after {
+  content: "";
+  background: rgba(245, 245, 245, 0.734);
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  top: 8px;
+  transition: all 0.5s ease-in-out;
+}
+header .menu-btn__burger.open {
+  transform: rotate(720deg);
+  background: transparent;
+}
+header .menu-btn__burger.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+header .menu-btn__burger.open::after {
+  transform: rotate(-45deg) translate(3px, -7px);
+  width: 28px;
+}
+header .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.93;
+  visibility: hidden;
+  z-index: 3;
+}
+header .nav .menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  gap: 3em;
+  background: #DFD816;
+  list-style-type: none;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+}
+header .nav .menu-nav.open {
+  transform: translateY(0);
+  visibility: visible;
+}
+header .nav .menu-nav__item {
+  transform: translateX(100vw);
+  transition: all 0.5s ease-in-out;
+}
+header .nav .menu-nav__item.open {
+  transform: translateX(0);
+}
+header .nav .menu-nav .menu-nav__item:nth-child(1) {
+  transition-delay: 0.25s;
+}
+header .nav .menu-nav .menu-nav__item:nth-child(2) {
+  transition-delay: 0.35s;
+}
+header .nav .menu-nav .menu-nav__item:nth-child(3) {
+  transition-delay: 0.45s;
+}
+header .nav .menu-nav .menu-nav__item:nth-child(4) {
+  transition-delay: 0.55s;
+}
+header .nav .menu-nav__link {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  font-size: size(bold);
+}
+header .nav .menu-nav__link:hover {
+  color: rgba(245, 245, 245, 0.734);
+  border: 1px rgba(245, 245, 245, 0.734) solid;
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+}
+main .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+main .intro__text {
+  color: rgba(245, 245, 245, 0.734);
+  font-family: "Inconsolata", monospace;
+}
+main .intro .my__name {
+  font-weight: 900;
+  font-size: 35px;
+  font-family: "Roboto Slab", serif;
+}
+main .intro__social-icons {
+  position: fixed;
+  padding: 1rem;
+  bottom: 2.5rem;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  backdrop-filter: blur(7px) saturate(200%);
+  -webkit-backdrop-filter: blur(7px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.36);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+main .intro__social-icons:hover {
+  background: #0F0A45;
+  transition: all 0.5s ease-in-out;
+}
+main .intro__social-icons a:hover {
+  color: #DFD816;
+  transition: all 0.5s ease-in-out;
+}
+main .about-me .container .row {
+  color: rgba(245, 245, 245, 0.734);
+  font-family: "Inconsolata", monospace;
+}
+main .my-services .container .row .col-md .card {
+  background: #100b49;
+  color: rgba(245, 245, 245, 0.734);
+  border-bottom: 5px #DFD816 solid;
+  font-family: "Bitter", serif;
+  word-spacing: 3px;
+  transition: all 0.5s ease-in-out;
+}
+main .my-services .container .row .col-md .card:hover {
+  border: 1px #DFD816 solid;
+  transition: all 0.5s ease-in-out;
+}
+main .contact__light {
+  color: rgba(245, 245, 245, 0.734);
+}
+main .contact__big {
+  font-size: 35px;
+  font-weight: 500;
+}
+main .contact .container {
+  border-radius: 5px;
+  padding: 20px;
+  width: 50vw;
+  border: 1px solid #DFD816;
+  font-family: "Roboto Slab", serif;
+  /* Clear floats after the columns */
+}
+main .contact .container input[type=text], main .contact .container input[type=email], main .contact .container textarea {
+  width: 100%;
+  padding: 12px;
+  background: #0F0A45;
+  border: 1px solid #DFD816;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: "Roboto Slab", serif;
+  color: rgba(245, 245, 245, 0.734);
+}
+main .contact .container label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: rgba(245, 245, 245, 0.734);
+}
+main .contact .container input[type=submit] {
+  background-color: #150e60;
+  color: rgba(245, 245, 245, 0.734);
+  padding: 12px 20px;
+  border: none;
+  width: 100px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+main .contact .container input[type=submit]:hover {
+  background-color: #0F0A45;
+  border: 1px #DFD816 solid;
+  transition: all 0.5s ease-in-out;
+}
+main .contact .container .col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+main .contact .container .col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+main .contact .container .row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 480px) {
+  header .menu-btn {
+    right: 3rem;
+  }
+  header main .intro {
+    width: 100vw;
+    margin-left: 2rem;
+  }
+  header main .intro .my__name {
+    font-weight: 900;
+    font-size: 20px;
+  }
+  header main .my-services {
+    margin-left: 2rem;
+  }
+  header footer .container {
+    font-size: 2.5vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    /* Responsive layout - when the screen is less than 600px wide, 
+    make the two columns stack on top of each other instead of next to each other */
+  }
+  main .contact .container {
+    width: 100vw;
+  }
+  main .contact .container .col-25, main .contact .container .col-75 {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+body {
+  background: #0c0838;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=mainsass.css.map */

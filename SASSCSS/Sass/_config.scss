@@ -1,0 +1,42 @@
+$primary-color: #DFD816;
+$secondary-color: #0F0A45;
+$text-color: rgba(245, 245, 245, 0.734);
+$font-weigths: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 900
+);
+$font-size: (
+    "regular": 15px,
+    "sm-only": 20px,
+    "medium": 30px,
+    "bold": 35px
+);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin media-lg {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}

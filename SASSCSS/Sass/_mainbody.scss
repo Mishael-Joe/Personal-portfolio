@@ -58,11 +58,15 @@ main {
 
     .about-me {
         
-        .container {
+        .container-fluid {
+            width: 90vw;
 
-            .row {
+            .flex {
                 color: $text-color;
                 font-family: 'Inconsolata', monospace;
+                display: flex;
+                flex-direction: row;
+                gap: 2.5rem;                
             }
         }
     }

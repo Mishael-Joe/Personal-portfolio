@@ -156,9 +156,15 @@ main .intro__social-icons a:hover {
   color: #DFD816;
   transition: all 0.5s ease-in-out;
 }
-main .about-me .container .row {
+main .about-me .container-fluid {
+  width: 90vw;
+}
+main .about-me .container-fluid .flex {
   color: rgba(245, 245, 245, 0.734);
   font-family: "Inconsolata", monospace;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
 }
 main .my-services .container .row .col-md .card {
   background: #100b49;
@@ -237,19 +243,25 @@ main .contact .container .row::after {
   header .menu-btn {
     right: 3rem;
   }
+  header main {
+    margin: 0;
+  }
   header main .intro {
     width: 100vw;
     margin-left: 2rem;
   }
   header main .intro .my__name {
-    font-weight: 900;
-    font-size: 20px;
+    font-size: 10px;
+  }
+  header main .about-me .container-fluid .flex {
+    display: flex;
+    flex-direction: column;
   }
   header main .my-services {
     margin-left: 2rem;
   }
   header footer .container {
-    font-size: 2.5vw;
+    font-size: 2.2vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -257,8 +269,16 @@ main .contact .container .row::after {
     /* Responsive layout - when the screen is less than 600px wide, 
     make the two columns stack on top of each other instead of next to each other */
   }
+  main .about-me .container-fluid .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  main .about-me .container-fluid .flex img {
+    width: 50%;
+    height: auto;
+  }
   main .contact .container {
-    width: 100vw;
+    width: 90vw;
   }
   main .contact .container .col-25, main .contact .container .col-75 {
     width: 100%;
